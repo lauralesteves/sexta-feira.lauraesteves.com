@@ -1,0 +1,14 @@
+{
+  "name": "Finalmente Sexta-Feira!",
+  "short_name": "Sexta-Feira!",
+  "icons": [
+    {
+      "src": "/images/favicon.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "display": "browser"
+}

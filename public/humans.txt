@@ -1,0 +1,13 @@
+/* TEAM */
+Creator: Laura Esteves
+Site: https://lauraesteves.com
+Contact: lauralesteves [at] gmail.com
+Location: São Paulo, Brasil
+
+/* SITE */
+Name: Finalmente Sexta-Feira!
+URL: https://sexta-feira.lauraesteves.com
+Description: Celebre o melhor dia da semana com estilo.
+Standards: HTML5, CSS3, ECMAScript 2020
+Components: React 19, TypeScript, Tailwind CSS 4, Vite
+Hosting: TBD
