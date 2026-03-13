@@ -9,24 +9,24 @@ const localeData: Record<
 > = {
   pt: {
     lang: 'pt-BR',
-    title: 'Finalmente Sexta-Feira!',
+    title: 'Graças a deus é sexta-feira',
     url: 'https://sexta-feira.lauraesteves.com',
     description:
-      'Finalmente sexta-feira! Celebre o melhor dia da semana com estilo. Mais um site de extrema utilidade pública.',
+      'Sexta-feira chegou e você merece saber disso. Um vídeo, uma música e aquela sensação de que o fim de semana já começou. Graças a deus é sexta-feira. Mais um site de extrema utilidade pública.',
   },
   en: {
     lang: 'en',
-    title: 'Finally Friday!',
+    title: 'TGIF, eh, buddy?',
     url: 'https://friday.lauraesteves.com',
     description:
-      'Finally Friday! Celebrate the best day of the week in style. Yet another site of extreme public utility.',
+      'Friday is here and you deserve to know it. A video, a tune, and that feeling that the weekend has already begun. TGIF, buddy. Yet another site of extreme public utility.',
   },
   es: {
     lang: 'es',
-    title: '¡Por fin es viernes!',
+    title: 'Gracias a dios que es viernes',
     url: 'https://viernes.lauraesteves.com',
     description:
-      '¡Por fin es viernes! Celebra el mejor día de la semana con estilo. Otro sitio más de extrema utilidad pública.',
+      'El viernes llegó y mereces saberlo. Un video, una canción y esa sensación de que el fin de semana ya empezó. Gracias a dios que es viernes. Otro sitio más de extrema utilidad pública.',
   },
 };
 

@@ -30,8 +30,8 @@ interface Translations {
 
 const pt: Translations = {
   lang: 'pt-BR',
-  siteTitle: 'Finalmente Sexta-Feira!',
-  logoText: 'Finalmente Sexta-Feira!',
+  siteTitle: 'Graças a deus é sexta-feira',
+  logoText: 'Graças a deus é sexta-feira',
   heroTitle: 'Graças a deus é sexta-feira',
   heroSubtitle: 'Tá dando duro ou tá voando, xará?',
   audioSrc: '/audio/sexta-feira.mp3',
@@ -49,15 +49,15 @@ const pt: Translations = {
     { url: 'https://viernes.lauraesteves.com', flag: '/images/flags/es.svg', label: 'Español' },
   ],
   ogDescription:
-    'Finalmente sexta-feira! Celebre o melhor dia da semana com estilo. Mais um site de extrema utilidade pública.',
+    'Sexta-feira chegou e você merece saber disso. Um vídeo, uma música e aquela sensação de que o fim de semana já começou. Graças a deus é sexta-feira. Mais um site de extrema utilidade pública.',
   openMenu: 'Abrir menu',
   closeMenu: 'Fechar menu',
 };
 
 const en: Translations = {
   lang: 'en',
-  siteTitle: 'Finally Friday!',
-  logoText: 'Finally Friday!',
+  siteTitle: 'TGIF, eh, buddy?',
+  logoText: 'TGIF, eh, buddy?',
   heroTitle: 'TGIF, eh, buddy?',
   heroSubtitle: 'Working hard or hardly working, eh, mac?',
   audioSrc: '/audio/friday.mp3',
@@ -75,15 +75,15 @@ const en: Translations = {
     { url: 'https://viernes.lauraesteves.com', flag: '/images/flags/es.svg', label: 'Español' },
   ],
   ogDescription:
-    'Finally Friday! Celebrate the best day of the week in style. Yet another site of extreme public utility.',
+    'Friday is here and you deserve to know it. A video, a tune, and that feeling that the weekend has already begun. TGIF, buddy. Yet another site of extreme public utility.',
   openMenu: 'Open menu',
   closeMenu: 'Close menu',
 };
 
 const es: Translations = {
   lang: 'es',
-  siteTitle: '¡Por fin es viernes!',
-  logoText: '¡Por fin es viernes!',
+  siteTitle: 'Gracias a dios que es viernes',
+  logoText: 'Gracias a dios que es viernes',
   heroTitle: 'Gracias a dios que es viernes',
   heroSubtitle: '¿Trabajando duro o durando en el trabajo?',
   audioSrc: '/audio/viernes.mp3',
@@ -101,7 +101,7 @@ const es: Translations = {
     { url: 'https://friday.lauraesteves.com', flag: '/images/flags/en.svg', label: 'English' },
   ],
   ogDescription:
-    '¡Por fin es viernes! Celebra el mejor día de la semana con estilo. Otro sitio más de extrema utilidad pública.',
+    'El viernes llegó y mereces saberlo. Un video, una canción y esa sensación de que el fin de semana ya empezó. Gracias a dios que es viernes. Otro sitio más de extrema utilidad pública.',
   openMenu: 'Abrir menú',
   closeMenu: 'Cerrar menú',
 };
