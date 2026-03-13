@@ -1,0 +1,130 @@
+name: Build & Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Build PT
+        run: VITE_LOCALE=pt bun run vite build --outDir dist-pt
+
+      - name: Build EN
+        run: VITE_LOCALE=en bun run vite build --outDir dist-en
+
+      - name: Build ES
+        run: VITE_LOCALE=es bun run vite build --outDir dist-es
+
+      - name: Type check
+        run: bun run tsc -b
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Deploy PT assets to S3 (immutable cache)
+        run: |
+          aws s3 sync dist-pt/ s3://sexta-feira.lauraesteves.com \
+            --delete \
+            --cache-control "public, max-age=31536000, immutable" \
+            --exclude "*.html" \
+            --exclude "robots.txt" \
+            --exclude "site.webmanifest" \
+            --exclude "browserconfig.xml" \
+            --exclude "ai.txt" \
+            --exclude "humans.txt" \
+            --exclude ".well-known/*"
+
+      - name: Deploy PT HTML and metadata to S3 (short cache)
+        run: |
+          aws s3 sync dist-pt/ s3://sexta-feira.lauraesteves.com \
+            --delete \
+            --cache-control "public, max-age=3600" \
+            --exclude "*" \
+            --include "*.html" \
+            --include "robots.txt" \
+            --include "site.webmanifest" \
+            --include "browserconfig.xml" \
+            --include "ai.txt" \
+            --include "humans.txt" \
+            --include ".well-known/*"
+
+      - name: Deploy EN assets to S3 (immutable cache)
+        run: |
+          aws s3 sync dist-en/ s3://friday.lauraesteves.com \
+            --delete \
+            --cache-control "public, max-age=31536000, immutable" \
+            --exclude "*.html" \
+            --exclude "robots.txt" \
+            --exclude "site.webmanifest" \
+            --exclude "browserconfig.xml" \
+            --exclude "ai.txt" \
+            --exclude "humans.txt" \
+            --exclude ".well-known/*"
+
+      - name: Deploy EN HTML and metadata to S3 (short cache)
+        run: |
+          aws s3 sync dist-en/ s3://friday.lauraesteves.com \
+            --delete \
+            --cache-control "public, max-age=3600" \
+            --exclude "*" \
+            --include "*.html" \
+            --include "robots.txt" \
+            --include "site.webmanifest" \
+            --include "browserconfig.xml" \
+            --include "ai.txt" \
+            --include "humans.txt" \
+            --include ".well-known/*"
+
+      - name: Deploy ES assets to S3 (immutable cache)
+        run: |
+          aws s3 sync dist-es/ s3://viernes.lauraesteves.com \
+            --delete \
+            --cache-control "public, max-age=31536000, immutable" \
+            --exclude "*.html" \
+            --exclude "robots.txt" \
+            --exclude "site.webmanifest" \
+            --exclude "browserconfig.xml" \
+            --exclude "ai.txt" \
+            --exclude "humans.txt" \
+            --exclude ".well-known/*"
+
+      - name: Deploy ES HTML and metadata to S3 (short cache)
+        run: |
+          aws s3 sync dist-es/ s3://viernes.lauraesteves.com \
+            --delete \
+            --cache-control "public, max-age=3600" \
+            --exclude "*" \
+            --include "*.html" \
+            --include "robots.txt" \
+            --include "site.webmanifest" \
+            --include "browserconfig.xml" \
+            --include "ai.txt" \
+            --include "humans.txt" \
+            --include ".well-known/*"
+
+      - name: Invalidate CloudFront caches
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
+            --paths "/*"
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.EN_CLOUDFRONT_DISTRIBUTION_ID }} \
+            --paths "/*"
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.ES_CLOUDFRONT_DISTRIBUTION_ID }} \
+            --paths "/*"
