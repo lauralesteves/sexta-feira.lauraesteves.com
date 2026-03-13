@@ -31,7 +31,7 @@ interface Translations {
 const pt: Translations = {
   lang: 'pt-BR',
   siteTitle: 'Graças a deus é sexta-feira',
-  logoText: 'Graças a deus é sexta-feira',
+  logoText: 'Sexta feira',
   heroTitle: 'Graças a deus é sexta-feira',
   heroSubtitle: 'Tá dando duro ou tá voando, xará?',
   audioSrc: '/audio/sexta-feira.mp3',
@@ -57,7 +57,7 @@ const pt: Translations = {
 const en: Translations = {
   lang: 'en',
   siteTitle: 'TGIF, eh, buddy?',
-  logoText: 'TGIF, eh, buddy?',
+  logoText: 'Friday',
   heroTitle: 'TGIF, eh, buddy?',
   heroSubtitle: 'Working hard or hardly working, eh, mac?',
   audioSrc: '/audio/friday.mp3',
@@ -83,7 +83,7 @@ const en: Translations = {
 const es: Translations = {
   lang: 'es',
   siteTitle: 'Gracias a dios que es viernes',
-  logoText: 'Gracias a dios que es viernes',
+  logoText: 'Viernes',
   heroTitle: 'Gracias a dios que es viernes',
   heroSubtitle: '¿Trabajando duro o durando en el trabajo?',
   audioSrc: '/audio/viernes.mp3',
