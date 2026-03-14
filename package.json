@@ -1,0 +1,36 @@
+{
+  "name": "sexta-feira.lauraesteves.com",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "VITE_LOCALE=pt vite",
+    "dev:en": "VITE_LOCALE=en vite",
+    "dev:es": "VITE_LOCALE=es vite",
+    "build": "tsc -b && vite build",
+    "build:pt": "VITE_LOCALE=pt vite build",
+    "build:en": "VITE_LOCALE=en vite build",
+    "build:es": "VITE_LOCALE=es vite build",
+    "build:all": "tsc -b && VITE_LOCALE=pt vite build --outDir dist-pt && VITE_LOCALE=en vite build --outDir dist-en && VITE_LOCALE=es vite build --outDir dist-es",
+    "check": "biome check . --write",
+    "preview": "vite preview",
+    "test": "vitest",
+    "prepare": "cp scripts/pre-push .git/hooks/pre-push && chmod +x .git/hooks/pre-push"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.0",
+    "@tailwindcss/vite": "^4.1.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@vitejs/plugin-react-swc": "^4.2.0",
+    "tailwindcss": "^4.1.0",
+    "typescript": "^5.7.0",
+    "vite": "^6.3.0",
+    "vitest": "^3.1.0"
+  },
+  "trustedDependencies": ["@biomejs/biome"]
+}
