@@ -83,7 +83,7 @@ export function AudioButton() {
   const showMuted = !isPlaying || isMuted;
 
   return (
-    <div className="fixed bottom-14 left-1/2 -translate-x-1/2 z-50">
+    <div className="fixed left-1/2 -translate-x-1/2 z-50" style={{ bottom: 'calc(var(--spacing) * 16)' }}>
       <button
         type="button"
         onClick={toggle}
