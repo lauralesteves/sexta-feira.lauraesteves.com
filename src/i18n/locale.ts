@@ -17,6 +17,7 @@ interface Translations {
   soundOff: string;
   enableSound: string;
   disableSound: string;
+  footerTagline: string;
   footerText: string;
   footerName: string;
   lauraUrl: string;
@@ -39,6 +40,7 @@ const pt: Translations = {
   soundOff: 'Som desligado',
   enableSound: 'Ativar som',
   disableSound: 'Desativar som',
+  footerTagline: 'Mais um site de extrema utilidade pública',
   footerText: 'Feito com ❤️ e ☕️ por',
   footerName: 'Laura Esteves',
   lauraUrl: 'https://lauraesteves.com',
@@ -65,6 +67,7 @@ const en: Translations = {
   soundOff: 'Sound off',
   enableSound: 'Enable sound',
   disableSound: 'Disable sound',
+  footerTagline: 'Yet another site of extreme public utility',
   footerText: 'Made with ❤️ and ☕️ by',
   footerName: 'Laura Esteves',
   lauraUrl: 'https://lauraesteves.com/en',
@@ -91,6 +94,7 @@ const es: Translations = {
   soundOff: 'Sonido desactivado',
   enableSound: 'Activar sonido',
   disableSound: 'Desactivar sonido',
+  footerTagline: 'Otro sitio más de extrema utilidad pública',
   footerText: 'Hecho con ❤️ y ☕️ por',
   footerName: 'Laura Esteves',
   lauraUrl: 'https://lauraesteves.com/es',
