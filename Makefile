@@ -8,6 +8,10 @@ ES_CF_ID := $(shell aws cloudfront list-distributions --query "DistributionList.
 
 export AWS_PAGER :=
 
+## Servidor de desenvolvimento
+server:
+	yarn dev
+
 SYNC_IMMUTABLE = aws s3 sync $(1) s3://$(2) \
 	--delete \
 	--cache-control "public, max-age=31536000, immutable" \
@@ -31,7 +35,7 @@ SYNC_METADATA = aws s3 sync $(1) s3://$(2) \
 	--include "humans.txt" \
 	--include ".well-known/*"
 
-.PHONY: build build-pt build-en build-es deploy deploy-pt deploy-en deploy-es clean
+.PHONY: server build build-pt build-en build-es deploy deploy-pt deploy-en deploy-es clean
 
 ## Build todos os locales
 build:
