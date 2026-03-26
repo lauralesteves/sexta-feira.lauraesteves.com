@@ -9,11 +9,7 @@ export function LanguageFlag() {
           href={site.url}
           className="hover:opacity-80 transition-opacity"
         >
-          <img
-            src={site.flag}
-            alt={site.label}
-            className="w-7 h-[18px]"
-          />
+          <img src={site.flag} alt={site.label} className="w-7 h-[18px]" />
         </a>
       ))}
     </div>

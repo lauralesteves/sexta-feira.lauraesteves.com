@@ -56,7 +56,7 @@ export function AudioButton() {
       audio.pause();
       audio.src = '';
     };
-  }, [src, storageKey]);
+  }, [storageKey]);
 
   const toggle = useCallback(() => {
     const audio = audioRef.current;
@@ -83,7 +83,10 @@ export function AudioButton() {
   const showMuted = !isPlaying || isMuted;
 
   return (
-    <div className="fixed left-1/2 -translate-x-1/2 z-50" style={{ bottom: 'calc(var(--spacing) * 16)' }}>
+    <div
+      className="fixed left-1/2 -translate-x-1/2 z-50"
+      style={{ bottom: 'calc(var(--spacing) * 16)' }}
+    >
       <button
         type="button"
         onClick={toggle}
