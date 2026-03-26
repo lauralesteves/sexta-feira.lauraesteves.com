@@ -47,8 +47,16 @@ const pt: Translations = {
   escrevidaUrl: 'https://escrevida.com',
   siteUrl: 'https://sexta-feira.lauraesteves.com',
   alternateSites: [
-    { url: 'https://friday.lauraesteves.com', flag: '/images/flags/en.svg', label: 'English' },
-    { url: 'https://viernes.lauraesteves.com', flag: '/images/flags/es.svg', label: 'Español' },
+    {
+      url: 'https://friday.lauraesteves.com',
+      flag: '/images/flags/en.svg',
+      label: 'English',
+    },
+    {
+      url: 'https://viernes.lauraesteves.com',
+      flag: '/images/flags/es.svg',
+      label: 'Español',
+    },
   ],
   ogDescription:
     'Sexta-feira chegou e você merece saber disso. Um vídeo, uma música e aquela sensação de que o fim de semana já começou. Graças a deus é sexta-feira. Mais um site de extrema utilidade pública.',
@@ -74,8 +82,16 @@ const en: Translations = {
   escrevidaUrl: 'https://escrevida.com/en/',
   siteUrl: 'https://friday.lauraesteves.com',
   alternateSites: [
-    { url: 'https://sexta-feira.lauraesteves.com', flag: '/images/flags/pt.svg', label: 'Português' },
-    { url: 'https://viernes.lauraesteves.com', flag: '/images/flags/es.svg', label: 'Español' },
+    {
+      url: 'https://sexta-feira.lauraesteves.com',
+      flag: '/images/flags/pt.svg',
+      label: 'Português',
+    },
+    {
+      url: 'https://viernes.lauraesteves.com',
+      flag: '/images/flags/es.svg',
+      label: 'Español',
+    },
   ],
   ogDescription:
     'Friday is here and you deserve to know it. A video, a tune, and that feeling that the weekend has already begun. TGIF, buddy. Yet another site of extreme public utility.',
@@ -101,8 +117,16 @@ const es: Translations = {
   escrevidaUrl: 'https://escrevida.com/en/',
   siteUrl: 'https://viernes.lauraesteves.com',
   alternateSites: [
-    { url: 'https://sexta-feira.lauraesteves.com', flag: '/images/flags/pt.svg', label: 'Português' },
-    { url: 'https://friday.lauraesteves.com', flag: '/images/flags/en.svg', label: 'English' },
+    {
+      url: 'https://sexta-feira.lauraesteves.com',
+      flag: '/images/flags/pt.svg',
+      label: 'Português',
+    },
+    {
+      url: 'https://friday.lauraesteves.com',
+      flag: '/images/flags/en.svg',
+      label: 'English',
+    },
   ],
   ogDescription:
     'El viernes llegó y mereces saberlo. Un video, una canción y esa sensación de que el fin de semana ya empezó. Gracias a dios que es viernes. Otro sitio más de extrema utilidad pública.',
